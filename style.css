@@ -91,6 +91,12 @@ courtesy ffoodd: https://bit.ly/3msqNnP
   box-shadow: 0 4rem 4rem -2rem #14808a;
 }
 
+@media only screen and (max-width: 600px) {
+  .profile-card {
+    width: 100%;
+    max-width: 19.4444444444rem;
+  }
+}
 .profile-card_header {
   display: flex;
   align-items: center;
