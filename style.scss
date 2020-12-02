@@ -1,0 +1,215 @@
+$dark-cyan: hsl(185, 75%, 39%);
+$desaturated-blue: hsl(229, 23%, 23%);
+$grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+$border-radius: 1rem;
+
+$font-main: "Kumbh Sans", sans-serif;
+$font-size-base: 18;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+@function percent($size) {
+  $percentSize: $size / 16 * 100%;
+  @return #{$percentSize};
+}
+
+@function rem($size) {
+  $remSize: $size / $font-size-base;
+  @return #{$remSize}rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: percent(18);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  background-color: $dark-cyan;
+}
+
+/* Position background svgs with pseudo-selectors */
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+  position: relative;
+  font-family: $font-main;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-size: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    background: url("images/bg-pattern-top.svg") no-repeat bottom right;
+  }
+
+  &:after {
+    top: 100%;
+    left: 100%;
+    background: url("images/bg-pattern-bottom.svg") no-repeat top left;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*
+Hidden screen reader helper
+courtesy ffoodd: https://bit.ly/3msqNnP
+ */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.profile-card-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: $border-radius;
+  position: relative;
+  width: 100%;
+  max-width: rem(400);
+  box-shadow: 0 4rem 4rem -2rem darken($dark-cyan, 8);
+}
+
+.profile-card_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: rem(140);
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: rem(140);
+    background: url("images/bg-pattern-card.svg") no-repeat center;
+    background-size: cover;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+}
+
+.profile-card_picture {
+  border-radius: 50%;
+  margin-top: rem(-50);
+  border: rem(5) solid white;
+  z-index: 1;
+}
+
+.profile-card_main-info {
+  text-align: center;
+  color: $grayish-blue;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-card_name, .profile-card_age {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.profile-card_name {
+  font-weight: $font-weight-bold;
+  color: $desaturated-blue;
+}
+
+.profile-card_age {
+  font-weight: $font-weight-normal;
+  margin-left: 0.4rem;
+}
+
+.profile-card_city {
+  font-size: rem(14);
+  margin-top: 0.7rem;
+}
+
+.profile-card_social-stats-list {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  flex-wrap: wrap;
+  border-top: 1px solid hsla(0, 0%, 59%, 0.3);
+  padding: 1.5rem 0.2rem;
+
+  // Create an accessible list
+  > * {
+    list-style-type: none;
+    position: relative;
+
+    &::before {
+      content: "\200B";
+      height: 0;
+      display: block;
+    }
+  }
+}
+
+.profile-card_social-stat-item {
+  text-align: center;
+}
+
+.profile-card_stat-count, .profile-card_stat-label {
+  display: block;
+}
+
+.profile-card_stat-count {
+  font-size: 1.2rem;
+  font-weight: $font-weight-bold;
+  color: $desaturated-blue;
+}
+
+.profile-card_stat-label {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: $grayish-blue;
+}
+
