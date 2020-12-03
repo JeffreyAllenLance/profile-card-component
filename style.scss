@@ -116,6 +116,7 @@ courtesy grace_snow: https://github.com/grace-snow/fmentor_profile-card-componen
 
 .profile-card_header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: rem(140);
@@ -139,13 +140,15 @@ courtesy grace_snow: https://github.com/grace-snow/fmentor_profile-card-componen
   margin-top: rem(-50);
   border: rem(5) solid white;
   z-index: 1;
+  order: 1;
 }
 
 .profile-card_main-info {
   text-align: center;
   color: $grayish-blue;
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+
+  order: 2;
 }
 
 .profile-card_name, .profile-card_age {
@@ -166,6 +169,8 @@ courtesy grace_snow: https://github.com/grace-snow/fmentor_profile-card-componen
 .profile-card_city {
   font-size: rem(14);
   margin-top: 0.7rem;
+  order: 3;
+  margin-bottom: 1.5rem;
 }
 
 .profile-card_social-stats-list {
