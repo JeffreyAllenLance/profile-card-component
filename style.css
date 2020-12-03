@@ -59,7 +59,7 @@ body {
 
 /*
 Hidden screen reader helper
-courtesy grace_snow: https://github.com/grace-snow/fmentor_profile-card-component
+courtesy grace-snow: https://github.com/grace-snow/fmentor_profile-card-component
  */
 .sr-only {
   border: 0 !important;
@@ -147,6 +147,7 @@ courtesy grace_snow: https://github.com/grace-snow/fmentor_profile-card-componen
   margin-top: 0.7rem;
   order: 3;
   margin-bottom: 1.5rem;
+  color: #6a6f81;
 }
 
 .profile-card_social-stats-list {
