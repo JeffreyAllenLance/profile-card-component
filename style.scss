@@ -3,12 +3,8 @@ $desaturated-blue: hsl(229, 23%, 23%);
 $grayish-blue: hsl(227, 10%, 46%);
 $dark-gray: hsl(0, 0%, 59%);
 
-$border-radius: 1rem;
-
 $font-main: "Kumbh Sans", sans-serif;
 $font-size-base: 18;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
 
 @function percent($size) {
   $percentSize: $size / 16 * 100%;
@@ -84,7 +80,7 @@ body {
 
 /*
 Hidden screen reader helper
-courtesy ffoodd: https://bit.ly/3msqNnP
+courtesy grace_snow: https://github.com/grace-snow/fmentor_profile-card-component
  */
 
 .sr-only {
@@ -110,18 +106,12 @@ courtesy ffoodd: https://bit.ly/3msqNnP
 
 .profile-card {
   background: #fff;
-  border-radius: $border-radius;
+  border-radius: 1rem;
   position: relative;
   width: 100%;
+  min-width: rem(300);
   max-width: rem(400);
   box-shadow: 0 4rem 4rem -2rem darken($dark-cyan, 8);
-}
-
-@media only screen and (max-width: 600px) {
-  .profile-card {
-    width: 100%;
-    max-width: rem(350);
-  }
 }
 
 .profile-card_header {
@@ -139,8 +129,8 @@ courtesy ffoodd: https://bit.ly/3msqNnP
     height: rem(140);
     background: url("images/bg-pattern-card.svg") no-repeat center;
     background-size: cover;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
   }
 }
 
@@ -164,12 +154,12 @@ courtesy ffoodd: https://bit.ly/3msqNnP
 }
 
 .profile-card_name {
-  font-weight: $font-weight-bold;
+  font-weight: bold;
   color: $desaturated-blue;
 }
 
 .profile-card_age {
-  font-weight: $font-weight-normal;
+  font-weight: normal;
   margin-left: 0.4rem;
 }
 
@@ -209,7 +199,7 @@ courtesy ffoodd: https://bit.ly/3msqNnP
 
 .profile-card_stat-count {
   font-size: 1.2rem;
-  font-weight: $font-weight-bold;
+  font-weight: bold;
   color: $desaturated-blue;
 }
 

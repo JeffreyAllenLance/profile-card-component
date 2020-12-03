@@ -59,7 +59,7 @@ body {
 
 /*
 Hidden screen reader helper
-courtesy ffoodd: https://bit.ly/3msqNnP
+courtesy grace_snow: https://github.com/grace-snow/fmentor_profile-card-component
  */
 .sr-only {
   border: 0 !important;
@@ -87,16 +87,11 @@ courtesy ffoodd: https://bit.ly/3msqNnP
   border-radius: 1rem;
   position: relative;
   width: 100%;
+  min-width: 16.6666666667rem;
   max-width: 22.2222222222rem;
   box-shadow: 0 4rem 4rem -2rem #14808a;
 }
 
-@media only screen and (max-width: 600px) {
-  .profile-card {
-    width: 100%;
-    max-width: 19.4444444444rem;
-  }
-}
 .profile-card_header {
   display: flex;
   align-items: center;
@@ -136,12 +131,12 @@ courtesy ffoodd: https://bit.ly/3msqNnP
 }
 
 .profile-card_name {
-  font-weight: 700;
+  font-weight: bold;
   color: #2d3248;
 }
 
 .profile-card_age {
-  font-weight: 400;
+  font-weight: normal;
   margin-left: 0.4rem;
 }
 
@@ -178,7 +173,7 @@ courtesy ffoodd: https://bit.ly/3msqNnP
 
 .profile-card_stat-count {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: bold;
   color: #2d3248;
 }
 
