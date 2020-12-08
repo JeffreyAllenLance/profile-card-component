@@ -60,13 +60,13 @@ body {
   &:before {
     top: 0;
     left: 0;
-    background: url("images/bg-pattern-top.svg") no-repeat bottom right;
+    background: url("../images/bg-pattern-top.svg") no-repeat bottom right;
   }
 
   &:after {
     top: 100%;
     left: 100%;
-    background: url("images/bg-pattern-bottom.svg") no-repeat top left;
+    background: url("../images/bg-pattern-bottom.svg") no-repeat top left;
   }
 }
 
@@ -128,7 +128,7 @@ courtesy grace-snow: https://github.com/grace-snow/fmentor_profile-card-componen
     top: 0;
     width: 100%;
     height: rem(140);
-    background: url("images/bg-pattern-card.svg") no-repeat center;
+    background: url("../images/bg-pattern-card.svg") no-repeat center;
     background-size: cover;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
